@@ -9,6 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 code {
@@ -16,6 +18,7 @@ code {
     monospace;
 }
 
-.button, .input {
+.button,
+.input {
   margin: 12px;
 }
