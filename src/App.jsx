@@ -15,7 +15,8 @@ import { validatoinSchema } from "./utils/validationSchema";
 import './App.css';
 
 const App = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+  const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm({
+    mode: "onChange",
     resolver: yupResolver(validatoinSchema)
   });
   const onSubmit = (data) => console.log(data);
@@ -45,7 +46,9 @@ const App = () => {
             register={register}
             error={errors.passwordRepeat}
           />
-          <ButtonTest />
+          <ButtonTest
+            isValid={isValid}
+          />
         </form>
       </Grid.Col>
     </div>
