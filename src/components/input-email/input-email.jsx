@@ -8,7 +8,7 @@ export const InputEmail = ({ register, error, viewEmail }) => (
       className='input'
       role='input'
       placeholder='Email'
-      error={error && viewEmail && error.message}
+      error={error && error.message}
       data-test-id='input-email'
     />
   </div>

@@ -4,7 +4,7 @@ export const InputLogin = ({ register, error }) => (
   <div>
     <p className='input-title'>Введите логин</p>
     <Input
-      {...register('login', { required: true, patern: { value: /^[a-zA-Z][a-zA-Z0-9-_\.]{1,10}$/, message: 'error message' } })}
+      {...register('login', { required: true })}
       className='input'
       role='input'
       placeholder='Логин'
