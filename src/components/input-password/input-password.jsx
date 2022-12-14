@@ -4,8 +4,8 @@ import { PasswordInput } from '@alfalab/core-components/password-input';
 export const InputPassword = ({ register, error }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   return (
-    <div>
-      <p className='input-title'>Введите пароль</p>
+    <>
+      <div className='input-title'>Введите пароль</div>
       <PasswordInput
         {...register('password', { required: true })}
         className='input'
@@ -16,8 +16,9 @@ export const InputPassword = ({ register, error }) => {
         onPasswordVisibleChange={visible => {
           setPasswordVisible(visible);
         }}
-        data-test-id='input-password'
+        dataTestId='input-password'
+        block
       />
-    </div>
+    </>
   );
 }

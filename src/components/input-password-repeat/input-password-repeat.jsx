@@ -4,8 +4,8 @@ import { PasswordInput } from '@alfalab/core-components/password-input';
 export const InputPasswordRepeat = ({ register, error }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   return (
-    <div>
-      <p className='input-title'>Повторите пароль</p>
+    <>
+      <div className='input-title'>Повторите пароль</div>
       <PasswordInput
         {...register('passwordRepeat', { required: true })}
         className='input'
@@ -16,8 +16,9 @@ export const InputPasswordRepeat = ({ register, error }) => {
         onPasswordVisibleChange={visible => {
           setPasswordVisible(visible);
         }}
-        data-test-id='input-password-repeat'
+        dataTestId='input-password-repeat'
+        block
       />
-    </div>
+    </>
   );
 }

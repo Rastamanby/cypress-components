@@ -29,10 +29,9 @@
 }
 
 .input {
-  margin: 12px 0;
-  width: 220px;
+  margin: 6px 0 12px 0;
 }
 
 .button {
-  margin-top: 12px;
+  margin-top: 32px;
 }

@@ -13,6 +13,12 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  width: 640px;
+  min-width: 320px;
+  margin: 0 12px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

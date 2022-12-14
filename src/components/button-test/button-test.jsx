@@ -4,11 +4,11 @@ export const ButtonTest = ({isValid}) => (
   <Button
     className='button'
     role='button'
-    view='secondary'
-    data-test-id='button-submit'
+    view="primary"
     type='submit'
     disabled={!isValid}
-    onClick={console.log(isValid)}
+    dataTestId='button-submit'
+    block
   >
     Проверка
   </Button>
