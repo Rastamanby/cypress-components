@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+for (let i = 0; i < 100; i++) {
+  test(`render ${i}`, () => {
+    render(<App />);
+    const input = screen.getByRole('input');
+
+    fireEvent.change(input, { target: { value: '1111' } })
+  });
+}
