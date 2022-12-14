@@ -9,6 +9,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 640px;
+  min-width: 320px;
+  margin: 0 12px;
 }
 
 code {
@@ -16,6 +24,7 @@ code {
     monospace;
 }
 
-.button, .input {
+.button,
+.input {
   margin: 12px;
 }
