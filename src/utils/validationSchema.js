@@ -7,7 +7,7 @@ const passwordRegex = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/g;
 
 export const validatoinSchema = yup.object().shape({
   login: yup.string()
-    .matches(loginRegex, "Имя пользователя должно начинаться с латинской буквы, может содержать цифры и быть не менее 10 символов")
+    .matches(loginRegex, "Имя пользователя должно начинаться с латинской буквы, может содержать цифры и быть не более 10 символов")
     .required('Поле является обязательным'),
   tel: yup.string()
     .matches(phoneRegex, 'Неверный формат телефона')
