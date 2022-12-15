@@ -9,7 +9,7 @@ export const InputTel = ({ register, error }) => (
       role='input'
       placeholder='Телефон'
       error={error && error.message}
-      dataTestId='input-password-repeat'
+      dataTestId='input-tel'
       block
     />
   </>
