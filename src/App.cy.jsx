@@ -1,10 +1,8 @@
 import App from './App'
 
-describe('<Stepper>', () => {
-    for (let i = 0; i < 100; i++) {
-        it(`render ${i}`, () => {
-            cy.mount(<App />);
-            cy.get('.input').type('1111');
-        })
-    }
-})
+describe('App', () => {
+    it('Render button', () => {
+        cy.mount(<App />);
+        cy.get('[data-test-id=input-email]').type('1111');
+    })
+});

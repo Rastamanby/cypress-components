@@ -1,11 +1,11 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom'
 import App from './App';
 
-for (let i = 0; i < 100; i++) {
-  test(`render ${i}`, () => {
-    render(<App />);
-    const input = screen.getByRole('input');
+test('Render App', () => {
+  render(<App />);
+  const input = screen.getByRole('input');
 
-    fireEvent.change(input, { target: { value: '1111' } })
-  });
-}
+  fireEvent.change(input, { target: { value: '1111' } })
+});
