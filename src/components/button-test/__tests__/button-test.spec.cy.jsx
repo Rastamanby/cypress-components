@@ -19,5 +19,5 @@ it('not disabled button when the data is valid', () => {
   cy.mount(<ButtonTest
     isValid={true}
   />);
-  cy.get(('[data-test-id="button-submit"]')).should('be.not.disabled');
+  cy.get(('[data-test-id="button-submit"]')).should('be.enabled');
 })

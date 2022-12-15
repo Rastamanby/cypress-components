@@ -1,6 +1,16 @@
 import App from './App'
 
 describe('App', () => {
+  it('existence of all fields', () => {
+    cy.mount(<App />);
+    cy.get('[data-test-id=input-login]').should('exist');
+    cy.get('[data-test-id=input-tel]').should('exist');
+    cy.get('[data-test-id=input-email]').should('exist');
+    cy.get('[data-test-id=input-password]').should('exist');
+    cy.get('[data-test-id=input-password-repeat]').should('exist');
+    cy.get(('[data-test-id="button-submit"]')).should('exist');
+  })
+
   it('checking for valid data entry', () => {
     cy.mount(<App />);
     cy.get('[data-test-id=input-login]').type('abc123').should('have.value', 'abc123');
@@ -8,7 +18,7 @@ describe('App', () => {
     cy.get('[data-test-id=input-email]').type('abc@abc.abc').should('have.value', 'abc@abc.abc');
     cy.get('[data-test-id=input-password]').type('abcABC123').should('have.value', 'abcABC123');
     cy.get('[data-test-id=input-password-repeat]').type('abcABC123').should('have.value', 'abcABC123');
-    cy.get(('[data-test-id="button-submit"]')).should('be.not.disabled');
+    cy.get(('[data-test-id="button-submit"]')).should('be.enabled');
     cy.get(("form")).submit();
   })
 
@@ -18,7 +28,7 @@ describe('App', () => {
     cy.get('[data-test-id=input-tel]').type('+79261234567').should('have.value', '+79261234567');
     cy.get('[data-test-id=input-password]').type('abcABC123').should('have.value', 'abcABC123');
     cy.get('[data-test-id=input-password-repeat]').type('abcABC123').should('have.value', 'abcABC123');
-    cy.get(('[data-test-id="button-submit"]')).should('be.not.disabled');
+    cy.get(('[data-test-id="button-submit"]')).should('be.enabled');
     cy.get(("form")).submit();
   })
 
