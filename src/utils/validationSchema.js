@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const loginRegex = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,15}$/;
+const loginRegex = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,14}$/;
 const phoneRegex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 const passwordRegex = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/g;
 

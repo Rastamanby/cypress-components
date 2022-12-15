@@ -18,6 +18,11 @@ describe('App', () => {
     cy.get('[data-test-id=input-email]').type('abc@abc.abc').should('have.value', 'abc@abc.abc');
     cy.get('[data-test-id=input-password]').type('abcABC123').should('have.value', 'abcABC123');
     cy.get('[data-test-id=input-password-repeat]').type('abcABC123').should('have.value', 'abcABC123');
+    cy.get('span').should('not.contain.text', 'Неверный формат email');
+    cy.get('span').should('not.contain.text', 'Имя пользователя должно начинаться с латинской буквы, может содержать цифры и быть не более 15 символов');
+    cy.get('span').should('not.contain.text', 'Неверный формат телефона');
+    cy.get('span').should('not.contain.text', 'Пароль должен быть не менее 6 символов, содержать прописную и заглавную буквы, цифру');
+    cy.get('span').should('not.contain.text', 'Пароли не совпадают');
     cy.get(('[data-test-id="button-submit"]')).should('be.enabled');
     cy.get(("form")).submit();
   })
@@ -28,6 +33,11 @@ describe('App', () => {
     cy.get('[data-test-id=input-tel]').type('+79261234567').should('have.value', '+79261234567');
     cy.get('[data-test-id=input-password]').type('abcABC123').should('have.value', 'abcABC123');
     cy.get('[data-test-id=input-password-repeat]').type('abcABC123').should('have.value', 'abcABC123');
+    cy.get('span').should('not.contain.text', 'Неверный формат email');
+    cy.get('span').should('not.contain.text', 'Имя пользователя должно начинаться с латинской буквы, может содержать цифры и быть не более 15 символов');
+    cy.get('span').should('not.contain.text', 'Неверный формат телефона');
+    cy.get('span').should('not.contain.text', 'Пароль должен быть не менее 6 символов, содержать прописную и заглавную буквы, цифру');
+    cy.get('span').should('not.contain.text', 'Пароли не совпадают');
     cy.get(('[data-test-id="button-submit"]')).should('be.enabled');
     cy.get(("form")).submit();
   })
